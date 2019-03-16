@@ -1,3 +1,0 @@
-==== START logs for container storage-provisioner of pod kube-system/storage-provisioner ====
-E0308 08:48:39.768029       1 controller.go:682] Error watching for provisioning success, can't provision for claim "default/database-persistent-volume-claim": events is forbidden: User "system:serviceaccount:kube-system:storage-provisioner" cannot list resource "events" in API group "" in the namespace "default"
-==== END logs for container storage-provisioner of pod kube-system/storage-provisioner ====

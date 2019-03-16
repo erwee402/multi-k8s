@@ -1,2 +1,0 @@
-==== START logs for container default-http-backend of pod kube-system/default-http-backend-5ff9d456ff-8nhdg ====
-==== END logs for container default-http-backend of pod kube-system/default-http-backend-5ff9d456ff-8nhdg ====
