@@ -1,0 +1,129 @@
+==== START logs for container etcd of pod kube-system/etcd-minikube ====
+2019-03-08 08:48:04.721975 I | etcdmain: etcd Version: 3.2.24
+2019-03-08 08:48:04.722025 I | etcdmain: Git SHA: 420a45226
+2019-03-08 08:48:04.722031 I | etcdmain: Go Version: go1.8.7
+2019-03-08 08:48:04.722035 I | etcdmain: Go OS/Arch: linux/amd64
+2019-03-08 08:48:04.722040 I | etcdmain: setting maximum number of CPUs to 2, total number of available CPUs is 2
+2019-03-08 08:48:04.722083 I | embed: peerTLS: cert = /var/lib/minikube/certs/etcd/peer.crt, key = /var/lib/minikube/certs/etcd/peer.key, ca = , trusted-ca = /var/lib/minikube/certs/etcd/ca.crt, client-cert-auth = true
+2019-03-08 08:48:04.722854 I | embed: listening for peers on https://10.41.10.26:2380
+2019-03-08 08:48:04.722951 I | embed: listening for client requests on 10.41.10.26:2379
+2019-03-08 08:48:04.723046 I | embed: listening for client requests on 127.0.0.1:2379
+2019-03-08 08:48:04.732020 I | etcdserver: name = minikube
+2019-03-08 08:48:04.732051 I | etcdserver: data dir = /data/minikube
+2019-03-08 08:48:04.732059 I | etcdserver: member dir = /data/minikube/member
+2019-03-08 08:48:04.732064 I | etcdserver: heartbeat = 100ms
+2019-03-08 08:48:04.732069 I | etcdserver: election = 1000ms
+2019-03-08 08:48:04.732074 I | etcdserver: snapshot count = 10000
+2019-03-08 08:48:04.732083 I | etcdserver: advertise client URLs = https://10.41.10.26:2379
+2019-03-08 08:48:04.732088 I | etcdserver: initial advertise peer URLs = https://10.41.10.26:2380
+2019-03-08 08:48:04.732096 I | etcdserver: initial cluster = minikube=https://10.41.10.26:2380
+2019-03-08 08:48:04.738824 I | etcdserver: starting member e318d9d0a8944161 in cluster f473ea6fff7816fd
+2019-03-08 08:48:04.738862 I | raft: e318d9d0a8944161 became follower at term 0
+2019-03-08 08:48:04.738872 I | raft: newRaft e318d9d0a8944161 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+2019-03-08 08:48:04.738878 I | raft: e318d9d0a8944161 became follower at term 1
+2019-03-08 08:48:04.910976 W | auth: simple token is not cryptographically signed
+2019-03-08 08:48:05.012081 I | etcdserver: starting server... [version: 3.2.24, cluster version: to_be_decided]
+2019-03-08 08:48:05.012620 I | embed: ClientTLS: cert = /var/lib/minikube/certs/etcd/server.crt, key = /var/lib/minikube/certs/etcd/server.key, ca = , trusted-ca = /var/lib/minikube/certs/etcd/ca.crt, client-cert-auth = true
+2019-03-08 08:48:05.013385 I | etcdserver: e318d9d0a8944161 as single-node; fast-forwarding 9 ticks (election ticks 10)
+2019-03-08 08:48:05.013937 I | etcdserver/membership: added member e318d9d0a8944161 [https://10.41.10.26:2380] to cluster f473ea6fff7816fd
+2019-03-08 08:48:05.041459 I | raft: e318d9d0a8944161 is starting a new election at term 1
+2019-03-08 08:48:05.041536 I | raft: e318d9d0a8944161 became candidate at term 2
+2019-03-08 08:48:05.041573 I | raft: e318d9d0a8944161 received MsgVoteResp from e318d9d0a8944161 at term 2
+2019-03-08 08:48:05.041589 I | raft: e318d9d0a8944161 became leader at term 2
+2019-03-08 08:48:05.041597 I | raft: raft.node: e318d9d0a8944161 elected leader e318d9d0a8944161 at term 2
+2019-03-08 08:48:05.041892 I | etcdserver: setting up the initial cluster version to 3.2
+2019-03-08 08:48:05.042938 N | etcdserver/membership: set the initial cluster version to 3.2
+2019-03-08 08:48:05.042986 I | etcdserver/api: enabled capabilities for version 3.2
+2019-03-08 08:48:05.043042 I | etcdserver: published {Name:minikube ClientURLs:[https://10.41.10.26:2379]} to cluster f473ea6fff7816fd
+2019-03-08 08:48:05.043190 I | embed: ready to serve client requests
+2019-03-08 08:48:05.043510 I | embed: serving client requests on 10.41.10.26:2379
+2019-03-08 08:48:05.043541 I | embed: ready to serve client requests
+2019-03-08 08:48:05.043648 I | embed: serving client requests on 127.0.0.1:2379
+2019-03-08 08:48:24.011827 W | etcdserver: read-only range request "key:\"/registry/rolebindings/kube-system/system::leader-locking-kube-controller-manager\" " with result "range_response_count:0 size:5" took too long (141.6808ms) to execute
+2019-03-08 08:48:31.692774 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (102.8829ms) to execute
+2019-03-08 08:48:38.492825 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-scheduler\" " with result "range_response_count:1 size:430" took too long (264.5401ms) to execute
+proto: no coders for int
+proto: no encoder for ValueSize int [GetProperties]
+2019-03-08 08:48:39.181073 W | etcdserver: request "header:<ID:4711162531160033221 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/events/default/redis.1589ef892ae8f5d4\" mod_revision:0 > success:<request_put:<key:\"/registry/events/default/redis.1589ef892ae8f5d4\" value_size:330 lease:4711162531160032243 >> failure:<>>" with result "size:16" took too long (105.6465ms) to execute
+2019-03-08 08:48:39.198490 W | etcdserver: read-only range request "key:\"/registry/ranges/serviceips\" " with result "range_response_count:1 size:112026" took too long (146.9618ms) to execute
+2019-03-08 08:48:39.207663 W | etcdserver: read-only range request "key:\"/registry/events/default/postgres-deployment-5cb56b774f-ggnp7.1589ef891f83e3e8\" " with result "range_response_count:1 size:488" took too long (156.0617ms) to execute
+2019-03-08 08:48:39.207909 W | etcdserver: read-only range request "key:\"/registry/deployments/default/redis\" " with result "range_response_count:1 size:1077" took too long (120.039ms) to execute
+2019-03-08 08:48:39.208005 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-ggnp7\" " with result "range_response_count:1 size:1186" took too long (139.5757ms) to execute
+2019-03-08 08:48:42.048589 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-qzjv8\" " with result "range_response_count:1 size:1229" took too long (311.1695ms) to execute
+2019-03-08 08:48:42.048980 W | etcdserver: read-only range request "key:\"/registry/events/default/server-deployment-56d5dd7646-qzjv8.1589ef8963f93d5c\" " with result "range_response_count:1 size:482" took too long (311.2067ms) to execute
+2019-03-08 08:48:42.049220 W | etcdserver: read-only range request "key:\"/registry/persistentvolumeclaims/default/database-persistent-volume-claim\" " with result "range_response_count:1 size:1083" took too long (202.0292ms) to execute
+2019-03-08 08:48:42.049714 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (209.5357ms) to execute
+2019-03-08 08:48:42.755756 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-8kc2m\" " with result "range_response_count:1 size:1229" took too long (506.9047ms) to execute
+2019-03-08 08:48:42.756283 W | etcdserver: request "header:<ID:4711162531160033607 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/redis-868ff4679d-bxl6l\" mod_revision:680 > success:<request_put:<key:\"/registry/pods/default/redis-868ff4679d-bxl6l\" value_size:884 >> failure:<request_range:<key:\"/registry/pods/default/redis-868ff4679d-bxl6l\" > >>" with result "size:16" took too long (489.9832ms) to execute
+2019-03-08 08:48:42.761888 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-scheduler\" " with result "range_response_count:1 size:430" took too long (250.546ms) to execute
+2019-03-08 08:48:42.994680 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-ggnp7\" " with result "range_response_count:1 size:1186" took too long (225.7016ms) to execute
+2019-03-08 08:48:43.195931 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-wtth6\" " with result "range_response_count:1 size:1020" took too long (132.9915ms) to execute
+2019-03-08 08:48:43.225479 W | etcdserver: read-only range request "key:\"/registry/persistentvolumeclaims/default/database-persistent-volume-claim\" " with result "range_response_count:1 size:1083" took too long (136.9224ms) to execute
+2019-03-08 08:48:43.774952 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-8kc2m\" " with result "range_response_count:1 size:1229" took too long (490.132ms) to execute
+2019-03-08 08:48:43.775103 W | etcdserver: request "header:<ID:4711162531160033665 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/server-deployment-56d5dd7646-8kc2m\" mod_revision:694 > success:<request_put:<key:\"/registry/pods/default/server-deployment-56d5dd7646-8kc2m\" value_size:1149 >> failure:<request_range:<key:\"/registry/pods/default/server-deployment-56d5dd7646-8kc2m\" > >>" with result "size:16" took too long (488.2805ms) to execute
+2019-03-08 08:48:43.775951 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/v1beta1.authentication.k8s.io\" " with result "range_response_count:1 size:668" took too long (489.8004ms) to execute
+2019-03-08 08:48:43.776167 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/v1.storage.k8s.io\" " with result "range_response_count:1 size:633" took too long (491.3078ms) to execute
+2019-03-08 08:48:43.776274 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/v1beta1.scheduling.k8s.io\" " with result "range_response_count:1 size:657" took too long (489.5208ms) to execute
+2019-03-08 08:48:43.776448 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/v1.autoscaling\" " with result "range_response_count:1 size:624" took too long (489.6863ms) to execute
+2019-03-08 08:48:43.776682 W | etcdserver: read-only range request "key:\"/registry/apiregistration.k8s.io/apiservices/v1.\" " with result "range_response_count:1 size:579" took too long (487.2532ms) to execute
+2019-03-08 08:48:44.254516 W | etcdserver: request "header:<ID:4711162531160033698 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/client-deployment-85b74f5bb8-wtth6\" mod_revision:712 > success:<request_put:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-wtth6\" value_size:881 >> failure:<request_range:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-wtth6\" > >>" with result "size:16" took too long (208.5757ms) to execute
+2019-03-08 08:48:44.256840 W | etcdserver: read-only range request "key:\"/registry/events/default/postgres-deployment-5cb56b774f-gw9fx.1589ef8a49219f00\" " with result "range_response_count:1 size:488" took too long (350.0475ms) to execute
+2019-03-08 08:48:44.256973 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-gw9fx\" " with result "range_response_count:1 size:1186" took too long (349.6842ms) to execute
+2019-03-08 08:48:44.257170 W | etcdserver: read-only range request "key:\"/registry/persistentvolumeclaims/default/database-persistent-volume-claim\" " with result "range_response_count:1 size:1083" took too long (179.7162ms) to execute
+2019-03-08 08:48:44.257298 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (188.3053ms) to execute
+2019-03-08 08:48:44.257470 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-gw9fx\" " with result "range_response_count:1 size:1186" took too long (350.1167ms) to execute
+2019-03-08 08:48:46.551381 W | etcdserver: read-only range request "key:\"/registry/events/default/client-deployment-85b74f5bb8-m7htw.1589ef8a73598f08\" " with result "range_response_count:1 size:482" took too long (276.4768ms) to execute
+2019-03-08 08:48:46.551708 W | etcdserver: request "header:<ID:4711162531160033982 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/redis-868ff4679d-nl2gx\" mod_revision:822 > success:<request_put:<key:\"/registry/pods/default/redis-868ff4679d-nl2gx\" value_size:830 >> failure:<request_range:<key:\"/registry/pods/default/redis-868ff4679d-nl2gx\" > >>" with result "size:16" took too long (144.6225ms) to execute
+2019-03-08 08:48:46.556330 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-m7htw\" " with result "range_response_count:1 size:1020" took too long (280.8584ms) to execute
+2019-03-08 08:48:46.556678 W | etcdserver: read-only range request "key:\"/registry/persistentvolumeclaims/default/database-persistent-volume-claim\" " with result "range_response_count:1 size:1083" took too long (247.1357ms) to execute
+2019-03-08 08:48:46.556890 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (247.7455ms) to execute
+2019-03-08 08:48:47.980301 W | etcdserver: request "header:<ID:4711162531160034129 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/client-deployment-85b74f5bb8-m7htw\" mod_revision:909 > success:<request_put:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-m7htw\" value_size:935 >> failure:<request_range:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-m7htw\" > >>" with result "size:16" took too long (509.1042ms) to execute
+2019-03-08 08:48:48.340483 W | etcdserver: read-only range request "key:\"/registry/events/default/server-deployment-56d5dd7646-qzjv8.1589ef8963f93d5c\" " with result "range_response_count:1 size:482" took too long (157.6658ms) to execute
+2019-03-08 08:48:48.341048 W | etcdserver: read-only range request "key:\"/registry/pods/default/worker-deployment-777cd8f685-2w2mj\" " with result "range_response_count:1 size:1067" took too long (158.8326ms) to execute
+2019-03-08 08:48:48.910108 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-5xpg8\" " with result "range_response_count:1 size:1229" took too long (163.5512ms) to execute
+2019-03-08 08:48:48.910532 W | etcdserver: read-only range request "key:\"/registry/events/default/server-deployment-56d5dd7646-5xpg8.1589ef8b5db35228\" " with result "range_response_count:1 size:482" took too long (143.1589ms) to execute
+2019-03-08 08:48:48.910951 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/deployment-controller\" " with result "range_response_count:1 size:260" took too long (153.2488ms) to execute
+2019-03-08 08:48:48.915425 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-5xpg8\" " with result "range_response_count:1 size:1229" took too long (164.7837ms) to execute
+2019-03-08 08:48:51.431423 W | etcdserver: request "header:<ID:4711162531160034604 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/server-deployment-56d5dd7646-nmsmz\" mod_revision:1081 > success:<request_put:<key:\"/registry/pods/default/server-deployment-56d5dd7646-nmsmz\" value_size:1149 >> failure:<request_range:<key:\"/registry/pods/default/server-deployment-56d5dd7646-nmsmz\" > >>" with result "size:16" took too long (233.041ms) to execute
+2019-03-08 08:48:51.434091 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-nmsmz\" " with result "range_response_count:1 size:1229" took too long (289.4911ms) to execute
+2019-03-08 08:48:51.434257 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-48ptv\" " with result "range_response_count:1 size:961" took too long (168.8777ms) to execute
+2019-03-08 08:48:55.325449 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-drcrq\" " with result "range_response_count:1 size:1186" took too long (440.6727ms) to execute
+2019-03-08 08:48:55.325795 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-scheduler\" " with result "range_response_count:1 size:430" took too long (378.2896ms) to execute
+2019-03-08 08:48:55.326025 W | etcdserver: request "header:<ID:4711162531160035020 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/client-deployment-85b74f5bb8-nzpbj\" mod_revision:1314 > success:<request_put:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-nzpbj\" value_size:935 >> failure:<request_range:<key:\"/registry/pods/default/client-deployment-85b74f5bb8-nzpbj\" > >>" with result "size:16" took too long (259.7628ms) to execute
+2019-03-08 08:48:57.335466 W | etcdserver: read-only range request "key:\"/registry/pods/default/worker-deployment-777cd8f685-z8wfd\" " with result "range_response_count:1 size:1067" took too long (270.765ms) to execute
+2019-03-08 08:48:57.335590 W | etcdserver: read-only range request "key:\"/registry/pods/default/worker-deployment-777cd8f685-z8wfd\" " with result "range_response_count:1 size:1067" took too long (251.0222ms) to execute
+2019-03-08 08:49:00.427226 W | etcdserver: request "header:<ID:4711162531160035560 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/replicasets/default/server-deployment-56d5dd7646\" mod_revision:1467 > success:<request_put:<key:\"/registry/replicasets/default/server-deployment-56d5dd7646\" value_size:966 >> failure:<request_range:<key:\"/registry/replicasets/default/server-deployment-56d5dd7646\" > >>" with result "size:16" took too long (207.686ms) to execute
+2019-03-08 08:49:00.427623 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-jt7bk\" " with result "range_response_count:1 size:1020" took too long (520.736ms) to execute
+2019-03-08 08:49:00.427740 W | etcdserver: read-only range request "key:\"/registry/serviceaccounts/kube-system/cronjob-controller\" " with result "range_response_count:1 size:251" took too long (519.4901ms) to execute
+2019-03-08 08:49:00.427972 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-jt7bk\" " with result "range_response_count:1 size:1020" took too long (503.3851ms) to execute
+2019-03-08 08:49:00.428307 W | etcdserver: read-only range request "key:\"/registry/events/default/server-deployment-56d5dd7646.1589ef8b82dc29a8\" " with result "range_response_count:1 size:514" took too long (519.8008ms) to execute
+2019-03-08 08:49:00.864710 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-28pxr\" " with result "range_response_count:1 size:1186" took too long (240.2039ms) to execute
+2019-03-08 08:49:00.864862 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (201.3302ms) to execute
+2019-03-08 08:49:00.865479 W | etcdserver: read-only range request "key:\"/registry/secrets/kube-system/storage-provisioner-token-zrpf2\" " with result "range_response_count:1 size:2406" took too long (158.6377ms) to execute
+2019-03-08 08:49:01.314569 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-jt7bk\" " with result "range_response_count:1 size:1020" took too long (189.8689ms) to execute
+2019-03-08 08:49:03.490418 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-6sq92\" " with result "range_response_count:1 size:1186" took too long (125.151ms) to execute
+2019-03-08 08:49:03.491055 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-scheduler\" " with result "range_response_count:1 size:430" took too long (105.2858ms) to execute
+2019-03-08 08:49:03.491281 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-6sq92\" " with result "range_response_count:1 size:1186" took too long (106.6089ms) to execute
+2019-03-08 08:49:03.491469 W | etcdserver: read-only range request "key:\"/registry/configmaps/kube-system/ingress-controller-leader-nginx\" " with result "range_response_count:1 size:451" took too long (124.9439ms) to execute
+2019-03-08 08:49:03.491722 W | etcdserver: read-only range request "key:\"/registry/secrets/kube-system/coredns-token-wvm2r\" " with result "range_response_count:1 size:2322" took too long (128.3945ms) to execute
+2019-03-08 08:49:03.504372 W | etcdserver: read-only range request "key:\"/registry/pods/kube-system/\" range_end:\"/registry/pods/kube-system0\" " with result "range_response_count:6 size:11298" took too long (137.937ms) to execute
+2019-03-08 08:49:04.139468 W | etcdserver: request "header:<ID:4711162531160036035 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/pods/default/redis-868ff4679d-zqn4n\" mod_revision:1762 > success:<request_put:<key:\"/registry/pods/default/redis-868ff4679d-zqn4n\" value_size:889 >> failure:<request_range:<key:\"/registry/pods/default/redis-868ff4679d-zqn4n\" > >>" with result "size:16" took too long (129.5906ms) to execute
+2019-03-08 08:49:04.140594 W | etcdserver: read-only range request "key:\"/registry/pods/default/redis-868ff4679d-zqn4n\" " with result "range_response_count:1 size:957" took too long (155.3196ms) to execute
+2019-03-08 08:49:04.380551 W | etcdserver: read-only range request "key:\"/registry/pods/default/worker-deployment-777cd8f685-227p2\" " with result "range_response_count:1 size:1067" took too long (104.3923ms) to execute
+2019-03-08 08:49:04.397059 W | etcdserver: read-only range request "key:\"/registry/events/default/worker-deployment-777cd8f685-227p2.1589ef8ee0538fc4\" " with result "range_response_count:1 size:483" took too long (120.515ms) to execute
+2019-03-08 08:49:05.633931 W | etcdserver: request "header:<ID:4711162531160036204 username:\"kube-apiserver-etcd-client\" auth_revision:1 > txn:<compare:<target:MOD key:\"/registry/services/endpoints/kube-system/kube-scheduler\" mod_revision:1752 > success:<request_put:<key:\"/registry/services/endpoints/kube-system/kube-scheduler\" value_size:352 >> failure:<request_range:<key:\"/registry/services/endpoints/kube-system/kube-scheduler\" > >>" with result "size:16" took too long (114.985ms) to execute
+2019-03-08 08:49:06.064497 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-6sq92\" " with result "range_response_count:1 size:1186" took too long (219.5038ms) to execute
+2019-03-08 08:49:06.064730 W | etcdserver: read-only range request "key:\"/registry/pods/default/postgres-deployment-5cb56b774f-6sq92\" " with result "range_response_count:1 size:1186" took too long (200.1097ms) to execute
+2019-03-08 08:49:07.996225 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-v5dwt\" " with result "range_response_count:1 size:1020" took too long (129.4698ms) to execute
+2019-03-08 08:49:07.998697 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-v5dwt\" " with result "range_response_count:1 size:1020" took too long (114.0766ms) to execute
+2019-03-08 08:49:16.217004 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-k7vlk\" " with result "range_response_count:1 size:1229" took too long (305.2555ms) to execute
+2019-03-08 08:49:16.217657 W | etcdserver: read-only range request "key:\"/registry/pods/default/redis-868ff4679d-ctths\" " with result "range_response_count:1 size:898" took too long (152.5022ms) to execute
+2019-03-08 08:49:16.658832 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-qtzr8\" " with result "range_response_count:1 size:1020" took too long (113.7421ms) to execute
+2019-03-08 08:49:16.659121 W | etcdserver: read-only range request "key:\"/registry/pods/default/client-deployment-85b74f5bb8-qtzr8\" " with result "range_response_count:1 size:1020" took too long (134.3792ms) to execute
+2019-03-08 08:49:23.183369 W | etcdserver: read-only range request "key:\"/registry/events/default/server-deployment-56d5dd7646-cx64f.1589ef9319bc961c\" " with result "range_response_count:1 size:483" took too long (308.8311ms) to execute
+2019-03-08 08:49:23.185582 W | etcdserver: read-only range request "key:\"/registry/secrets/kube-system/replicaset-controller-token-9wvd4\" " with result "range_response_count:1 size:2420" took too long (310.7151ms) to execute
+2019-03-08 08:49:23.185857 W | etcdserver: read-only range request "key:\"/registry/pods/default/server-deployment-56d5dd7646-cx64f\" " with result "range_response_count:1 size:1229" took too long (310.7555ms) to execute
+2019-03-08 08:49:23.186035 W | etcdserver: read-only range request "key:\"/registry/services/endpoints/kube-system/kube-controller-manager\" " with result "range_response_count:1 size:448" took too long (114.4549ms) to execute
+2019-03-08 08:58:05.686406 I | mvcc: store.index: compact 2980
+2019-03-08 08:58:05.730402 I | mvcc: finished scheduled compaction at 2980 (took 42.2773ms)
+==== END logs for container etcd of pod kube-system/etcd-minikube ====

@@ -1,0 +1,108 @@
+{
+    "selfLink": "/api/v1/namespaces/kube-system/services",
+    "resourceVersion": "4225",
+    "Items": [
+        {
+            "name": "default-http-backend",
+            "namespace": "kube-system",
+            "selfLink": "/api/v1/namespaces/kube-system/services/default-http-backend",
+            "uid": "f491b487-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "400",
+            "creationTimestamp": "2019-03-08T08:48:33Z",
+            "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "app.kubernetes.io/name": "default-http-backend",
+                "app.kubernetes.io/part-of": "kube-system",
+                "kubernetes.io/minikube-addons": "ingress",
+                "kubernetes.io/minikube-addons-endpoint": "ingress"
+            },
+            "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"addonmanager.kubernetes.io/mode\":\"Reconcile\",\"app.kubernetes.io/name\":\"default-http-backend\",\"app.kubernetes.io/part-of\":\"kube-system\",\"kubernetes.io/minikube-addons\":\"ingress\",\"kubernetes.io/minikube-addons-endpoint\":\"ingress\"},\"name\":\"default-http-backend\",\"namespace\":\"kube-system\"},\"spec\":{\"ports\":[{\"nodePort\":30001,\"port\":80,\"targetPort\":8080}],\"selector\":{\"app.kubernetes.io/name\":\"default-http-backend\"},\"type\":\"NodePort\"}}\n"
+            },
+            "Spec": {
+                "Type": "NodePort",
+                "Ports": [
+                    {
+                        "Name": "",
+                        "Protocol": "TCP",
+                        "Port": 80,
+                        "TargetPort": 8080,
+                        "NodePort": 30001
+                    }
+                ],
+                "Selector": {
+                    "app.kubernetes.io/name": "default-http-backend"
+                },
+                "ClusterIP": "10.98.193.35",
+                "ExternalName": "",
+                "ExternalIPs": null,
+                "LoadBalancerIP": "",
+                "SessionAffinity": "None",
+                "SessionAffinityConfig": null,
+                "LoadBalancerSourceRanges": null,
+                "ExternalTrafficPolicy": "Cluster",
+                "HealthCheckNodePort": 0,
+                "PublishNotReadyAddresses": false
+            },
+            "Status": {
+                "LoadBalancer": {
+                    "Ingress": null
+                }
+            }
+        },
+        {
+            "name": "kube-dns",
+            "namespace": "kube-system",
+            "selfLink": "/api/v1/namespaces/kube-system/services/kube-dns",
+            "uid": "efb5b22c-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "225",
+            "creationTimestamp": "2019-03-08T08:48:25Z",
+            "labels": {
+                "k8s-app": "kube-dns",
+                "kubernetes.io/cluster-service": "true",
+                "kubernetes.io/name": "KubeDNS"
+            },
+            "annotations": {
+                "prometheus.io/port": "9153",
+                "prometheus.io/scrape": "true"
+            },
+            "Spec": {
+                "Type": "ClusterIP",
+                "Ports": [
+                    {
+                        "Name": "dns",
+                        "Protocol": "UDP",
+                        "Port": 53,
+                        "TargetPort": 53,
+                        "NodePort": 0
+                    },
+                    {
+                        "Name": "dns-tcp",
+                        "Protocol": "TCP",
+                        "Port": 53,
+                        "TargetPort": 53,
+                        "NodePort": 0
+                    }
+                ],
+                "Selector": {
+                    "k8s-app": "kube-dns"
+                },
+                "ClusterIP": "10.96.0.10",
+                "ExternalName": "",
+                "ExternalIPs": null,
+                "LoadBalancerIP": "",
+                "SessionAffinity": "None",
+                "SessionAffinityConfig": null,
+                "LoadBalancerSourceRanges": null,
+                "ExternalTrafficPolicy": "",
+                "HealthCheckNodePort": 0,
+                "PublishNotReadyAddresses": false
+            },
+            "Status": {
+                "LoadBalancer": {
+                    "Ingress": null
+                }
+            }
+        }
+    ]
+}

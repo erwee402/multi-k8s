@@ -1,0 +1,622 @@
+{
+    "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/replicasets",
+    "resourceVersion": "4225",
+    "Items": [
+        {
+            "name": "coredns-86c58d9df4",
+            "namespace": "kube-system",
+            "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/replicasets/coredns-86c58d9df4",
+            "uid": "f2f1ecd5-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "395",
+            "generation": 1,
+            "creationTimestamp": "2019-03-08T08:48:30Z",
+            "labels": {
+                "k8s-app": "kube-dns",
+                "pod-template-hash": "86c58d9df4"
+            },
+            "annotations": {
+                "deployment.kubernetes.io/desired-replicas": "2",
+                "deployment.kubernetes.io/max-replicas": "3",
+                "deployment.kubernetes.io/revision": "1"
+            },
+            "ownerReferences": [
+                {
+                    "apiVersion": "apps/v1",
+                    "kind": "Deployment",
+                    "name": "coredns",
+                    "uid": "efb3b8bd-417e-11e9-9e86-00155d700139",
+                    "controller": true,
+                    "blockOwnerDeletion": true
+                }
+            ],
+            "Spec": {
+                "Replicas": 2,
+                "MinReadySeconds": 0,
+                "Selector": {
+                    "matchLabels": {
+                        "k8s-app": "kube-dns",
+                        "pod-template-hash": "86c58d9df4"
+                    }
+                },
+                "Template": {
+                    "creationTimestamp": null,
+                    "labels": {
+                        "k8s-app": "kube-dns",
+                        "pod-template-hash": "86c58d9df4"
+                    },
+                    "Spec": {
+                        "Volumes": [
+                            {
+                                "Name": "config-volume",
+                                "HostPath": null,
+                                "EmptyDir": null,
+                                "GCEPersistentDisk": null,
+                                "AWSElasticBlockStore": null,
+                                "GitRepo": null,
+                                "Secret": null,
+                                "NFS": null,
+                                "ISCSI": null,
+                                "Glusterfs": null,
+                                "PersistentVolumeClaim": null,
+                                "RBD": null,
+                                "Quobyte": null,
+                                "FlexVolume": null,
+                                "Cinder": null,
+                                "CephFS": null,
+                                "Flocker": null,
+                                "DownwardAPI": null,
+                                "FC": null,
+                                "AzureFile": null,
+                                "ConfigMap": {
+                                    "Name": "coredns",
+                                    "Items": [
+                                        {
+                                            "Key": "Corefile",
+                                            "Path": "Corefile",
+                                            "Mode": null
+                                        }
+                                    ],
+                                    "DefaultMode": 420,
+                                    "Optional": null
+                                },
+                                "VsphereVolume": null,
+                                "AzureDisk": null,
+                                "PhotonPersistentDisk": null,
+                                "Projected": null,
+                                "PortworxVolume": null,
+                                "ScaleIO": null,
+                                "StorageOS": null
+                            }
+                        ],
+                        "InitContainers": null,
+                        "Containers": [
+                            {
+                                "Name": "coredns",
+                                "Image": "k8s.gcr.io/coredns:1.2.6",
+                                "Command": null,
+                                "Args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "WorkingDir": "",
+                                "Ports": [
+                                    {
+                                        "Name": "dns",
+                                        "HostPort": 0,
+                                        "ContainerPort": 53,
+                                        "Protocol": "UDP",
+                                        "HostIP": ""
+                                    },
+                                    {
+                                        "Name": "dns-tcp",
+                                        "HostPort": 0,
+                                        "ContainerPort": 53,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    },
+                                    {
+                                        "Name": "metrics",
+                                        "HostPort": 0,
+                                        "ContainerPort": 9153,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    }
+                                ],
+                                "EnvFrom": null,
+                                "Env": null,
+                                "Resources": {
+                                    "Limits": {
+                                        "memory": "170Mi"
+                                    },
+                                    "Requests": {
+                                        "cpu": "100m",
+                                        "memory": "70Mi"
+                                    }
+                                },
+                                "VolumeMounts": [
+                                    {
+                                        "Name": "config-volume",
+                                        "ReadOnly": true,
+                                        "MountPath": "/etc/coredns",
+                                        "SubPath": "",
+                                        "MountPropagation": null
+                                    }
+                                ],
+                                "VolumeDevices": null,
+                                "LivenessProbe": {
+                                    "Exec": null,
+                                    "HTTPGet": {
+                                        "Path": "/health",
+                                        "Port": 8080,
+                                        "Host": "",
+                                        "Scheme": "HTTP",
+                                        "HTTPHeaders": null
+                                    },
+                                    "TCPSocket": null,
+                                    "InitialDelaySeconds": 60,
+                                    "TimeoutSeconds": 5,
+                                    "PeriodSeconds": 10,
+                                    "SuccessThreshold": 1,
+                                    "FailureThreshold": 5
+                                },
+                                "ReadinessProbe": null,
+                                "Lifecycle": null,
+                                "TerminationMessagePath": "/dev/termination-log",
+                                "TerminationMessagePolicy": "File",
+                                "ImagePullPolicy": "IfNotPresent",
+                                "SecurityContext": {
+                                    "Capabilities": {
+                                        "Add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "Drop": [
+                                            "all"
+                                        ]
+                                    },
+                                    "Privileged": null,
+                                    "SELinuxOptions": null,
+                                    "RunAsUser": null,
+                                    "RunAsGroup": null,
+                                    "RunAsNonRoot": null,
+                                    "ReadOnlyRootFilesystem": true,
+                                    "AllowPrivilegeEscalation": false
+                                },
+                                "Stdin": false,
+                                "StdinOnce": false,
+                                "TTY": false
+                            }
+                        ],
+                        "RestartPolicy": "Always",
+                        "TerminationGracePeriodSeconds": 30,
+                        "ActiveDeadlineSeconds": null,
+                        "DNSPolicy": "Default",
+                        "NodeSelector": null,
+                        "ServiceAccountName": "coredns",
+                        "AutomountServiceAccountToken": null,
+                        "NodeName": "",
+                        "SecurityContext": {
+                            "HostNetwork": false,
+                            "HostPID": false,
+                            "HostIPC": false,
+                            "ShareProcessNamespace": null,
+                            "SELinuxOptions": null,
+                            "RunAsUser": null,
+                            "RunAsGroup": null,
+                            "RunAsNonRoot": null,
+                            "SupplementalGroups": null,
+                            "FSGroup": null
+                        },
+                        "ImagePullSecrets": null,
+                        "Hostname": "",
+                        "Subdomain": "",
+                        "Affinity": null,
+                        "SchedulerName": "default-scheduler",
+                        "Tolerations": [
+                            {
+                                "Key": "CriticalAddonsOnly",
+                                "Operator": "Exists",
+                                "Value": "",
+                                "Effect": "",
+                                "TolerationSeconds": null
+                            },
+                            {
+                                "Key": "node-role.kubernetes.io/master",
+                                "Operator": "",
+                                "Value": "",
+                                "Effect": "NoSchedule",
+                                "TolerationSeconds": null
+                            }
+                        ],
+                        "HostAliases": null,
+                        "PriorityClassName": "",
+                        "Priority": null,
+                        "DNSConfig": null
+                    }
+                }
+            },
+            "Status": {
+                "Replicas": 2,
+                "FullyLabeledReplicas": 2,
+                "ReadyReplicas": 2,
+                "AvailableReplicas": 2,
+                "ObservedGeneration": 1,
+                "Conditions": null
+            }
+        },
+        {
+            "name": "default-http-backend-5ff9d456ff",
+            "namespace": "kube-system",
+            "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/replicasets/default-http-backend-5ff9d456ff",
+            "uid": "f47839a5-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "1803",
+            "generation": 1,
+            "creationTimestamp": "2019-03-08T08:48:33Z",
+            "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "app.kubernetes.io/name": "default-http-backend",
+                "pod-template-hash": "5ff9d456ff"
+            },
+            "annotations": {
+                "deployment.kubernetes.io/desired-replicas": "1",
+                "deployment.kubernetes.io/max-replicas": "2",
+                "deployment.kubernetes.io/revision": "1"
+            },
+            "ownerReferences": [
+                {
+                    "apiVersion": "apps/v1",
+                    "kind": "Deployment",
+                    "name": "default-http-backend",
+                    "uid": "f4779f15-417e-11e9-9e86-00155d700139",
+                    "controller": true,
+                    "blockOwnerDeletion": true
+                }
+            ],
+            "Spec": {
+                "Replicas": 1,
+                "MinReadySeconds": 0,
+                "Selector": {
+                    "matchLabels": {
+                        "addonmanager.kubernetes.io/mode": "Reconcile",
+                        "app.kubernetes.io/name": "default-http-backend",
+                        "pod-template-hash": "5ff9d456ff"
+                    }
+                },
+                "Template": {
+                    "creationTimestamp": null,
+                    "labels": {
+                        "addonmanager.kubernetes.io/mode": "Reconcile",
+                        "app.kubernetes.io/name": "default-http-backend",
+                        "pod-template-hash": "5ff9d456ff"
+                    },
+                    "Spec": {
+                        "Volumes": null,
+                        "InitContainers": null,
+                        "Containers": [
+                            {
+                                "Name": "default-http-backend",
+                                "Image": "gcr.io/google_containers/defaultbackend:1.4",
+                                "Command": null,
+                                "Args": null,
+                                "WorkingDir": "",
+                                "Ports": [
+                                    {
+                                        "Name": "",
+                                        "HostPort": 0,
+                                        "ContainerPort": 8080,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    }
+                                ],
+                                "EnvFrom": null,
+                                "Env": null,
+                                "Resources": {
+                                    "Limits": {
+                                        "cpu": "20m",
+                                        "memory": "30Mi"
+                                    },
+                                    "Requests": {
+                                        "cpu": "20m",
+                                        "memory": "30Mi"
+                                    }
+                                },
+                                "VolumeMounts": null,
+                                "VolumeDevices": null,
+                                "LivenessProbe": {
+                                    "Exec": null,
+                                    "HTTPGet": {
+                                        "Path": "/healthz",
+                                        "Port": 8080,
+                                        "Host": "",
+                                        "Scheme": "HTTP",
+                                        "HTTPHeaders": null
+                                    },
+                                    "TCPSocket": null,
+                                    "InitialDelaySeconds": 30,
+                                    "TimeoutSeconds": 5,
+                                    "PeriodSeconds": 10,
+                                    "SuccessThreshold": 1,
+                                    "FailureThreshold": 3
+                                },
+                                "ReadinessProbe": null,
+                                "Lifecycle": null,
+                                "TerminationMessagePath": "/dev/termination-log",
+                                "TerminationMessagePolicy": "File",
+                                "ImagePullPolicy": "IfNotPresent",
+                                "SecurityContext": null,
+                                "Stdin": false,
+                                "StdinOnce": false,
+                                "TTY": false
+                            }
+                        ],
+                        "RestartPolicy": "Always",
+                        "TerminationGracePeriodSeconds": 60,
+                        "ActiveDeadlineSeconds": null,
+                        "DNSPolicy": "ClusterFirst",
+                        "NodeSelector": null,
+                        "ServiceAccountName": "",
+                        "AutomountServiceAccountToken": null,
+                        "NodeName": "",
+                        "SecurityContext": {
+                            "HostNetwork": false,
+                            "HostPID": false,
+                            "HostIPC": false,
+                            "ShareProcessNamespace": null,
+                            "SELinuxOptions": null,
+                            "RunAsUser": null,
+                            "RunAsGroup": null,
+                            "RunAsNonRoot": null,
+                            "SupplementalGroups": null,
+                            "FSGroup": null
+                        },
+                        "ImagePullSecrets": null,
+                        "Hostname": "",
+                        "Subdomain": "",
+                        "Affinity": null,
+                        "SchedulerName": "default-scheduler",
+                        "Tolerations": null,
+                        "HostAliases": null,
+                        "PriorityClassName": "",
+                        "Priority": null,
+                        "DNSConfig": null
+                    }
+                }
+            },
+            "Status": {
+                "Replicas": 1,
+                "FullyLabeledReplicas": 1,
+                "ReadyReplicas": 1,
+                "AvailableReplicas": 1,
+                "ObservedGeneration": 1,
+                "Conditions": null
+            }
+        },
+        {
+            "name": "nginx-ingress-controller-7c66d668b",
+            "namespace": "kube-system",
+            "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/replicasets/nginx-ingress-controller-7c66d668b",
+            "uid": "f4806e99-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "2144",
+            "generation": 1,
+            "creationTimestamp": "2019-03-08T08:48:33Z",
+            "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "app.kubernetes.io/name": "nginx-ingress-controller",
+                "app.kubernetes.io/part-of": "kube-system",
+                "pod-template-hash": "7c66d668b"
+            },
+            "annotations": {
+                "deployment.kubernetes.io/desired-replicas": "1",
+                "deployment.kubernetes.io/max-replicas": "2",
+                "deployment.kubernetes.io/revision": "1"
+            },
+            "ownerReferences": [
+                {
+                    "apiVersion": "apps/v1",
+                    "kind": "Deployment",
+                    "name": "nginx-ingress-controller",
+                    "uid": "f47d276f-417e-11e9-9e86-00155d700139",
+                    "controller": true,
+                    "blockOwnerDeletion": true
+                }
+            ],
+            "Spec": {
+                "Replicas": 1,
+                "MinReadySeconds": 0,
+                "Selector": {
+                    "matchLabels": {
+                        "addonmanager.kubernetes.io/mode": "Reconcile",
+                        "app.kubernetes.io/name": "nginx-ingress-controller",
+                        "app.kubernetes.io/part-of": "kube-system",
+                        "pod-template-hash": "7c66d668b"
+                    }
+                },
+                "Template": {
+                    "creationTimestamp": null,
+                    "labels": {
+                        "addonmanager.kubernetes.io/mode": "Reconcile",
+                        "app.kubernetes.io/name": "nginx-ingress-controller",
+                        "app.kubernetes.io/part-of": "kube-system",
+                        "pod-template-hash": "7c66d668b"
+                    },
+                    "annotations": {
+                        "prometheus.io/port": "10254",
+                        "prometheus.io/scrape": "true"
+                    },
+                    "Spec": {
+                        "Volumes": null,
+                        "InitContainers": null,
+                        "Containers": [
+                            {
+                                "Name": "nginx-ingress-controller",
+                                "Image": "quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0",
+                                "Command": null,
+                                "Args": [
+                                    "/nginx-ingress-controller",
+                                    "--default-backend-service=$(POD_NAMESPACE)/default-http-backend",
+                                    "--configmap=$(POD_NAMESPACE)/nginx-load-balancer-conf",
+                                    "--tcp-services-configmap=$(POD_NAMESPACE)/tcp-services",
+                                    "--udp-services-configmap=$(POD_NAMESPACE)/udp-services",
+                                    "--annotations-prefix=nginx.ingress.kubernetes.io",
+                                    "--report-node-internal-ip-address"
+                                ],
+                                "WorkingDir": "",
+                                "Ports": [
+                                    {
+                                        "Name": "",
+                                        "HostPort": 80,
+                                        "ContainerPort": 80,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    },
+                                    {
+                                        "Name": "",
+                                        "HostPort": 443,
+                                        "ContainerPort": 443,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    },
+                                    {
+                                        "Name": "",
+                                        "HostPort": 18080,
+                                        "ContainerPort": 18080,
+                                        "Protocol": "TCP",
+                                        "HostIP": ""
+                                    }
+                                ],
+                                "EnvFrom": null,
+                                "Env": [
+                                    {
+                                        "Name": "POD_NAME",
+                                        "Value": "",
+                                        "ValueFrom": {
+                                            "FieldRef": {
+                                                "APIVersion": "v1",
+                                                "FieldPath": "metadata.name"
+                                            },
+                                            "ResourceFieldRef": null,
+                                            "ConfigMapKeyRef": null,
+                                            "SecretKeyRef": null
+                                        }
+                                    },
+                                    {
+                                        "Name": "POD_NAMESPACE",
+                                        "Value": "",
+                                        "ValueFrom": {
+                                            "FieldRef": {
+                                                "APIVersion": "v1",
+                                                "FieldPath": "metadata.namespace"
+                                            },
+                                            "ResourceFieldRef": null,
+                                            "ConfigMapKeyRef": null,
+                                            "SecretKeyRef": null
+                                        }
+                                    }
+                                ],
+                                "Resources": {
+                                    "Limits": null,
+                                    "Requests": null
+                                },
+                                "VolumeMounts": null,
+                                "VolumeDevices": null,
+                                "LivenessProbe": {
+                                    "Exec": null,
+                                    "HTTPGet": {
+                                        "Path": "/healthz",
+                                        "Port": 10254,
+                                        "Host": "",
+                                        "Scheme": "HTTP",
+                                        "HTTPHeaders": null
+                                    },
+                                    "TCPSocket": null,
+                                    "InitialDelaySeconds": 10,
+                                    "TimeoutSeconds": 1,
+                                    "PeriodSeconds": 10,
+                                    "SuccessThreshold": 1,
+                                    "FailureThreshold": 3
+                                },
+                                "ReadinessProbe": {
+                                    "Exec": null,
+                                    "HTTPGet": {
+                                        "Path": "/healthz",
+                                        "Port": 10254,
+                                        "Host": "",
+                                        "Scheme": "HTTP",
+                                        "HTTPHeaders": null
+                                    },
+                                    "TCPSocket": null,
+                                    "InitialDelaySeconds": 0,
+                                    "TimeoutSeconds": 1,
+                                    "PeriodSeconds": 10,
+                                    "SuccessThreshold": 1,
+                                    "FailureThreshold": 3
+                                },
+                                "Lifecycle": null,
+                                "TerminationMessagePath": "/dev/termination-log",
+                                "TerminationMessagePolicy": "File",
+                                "ImagePullPolicy": "IfNotPresent",
+                                "SecurityContext": {
+                                    "Capabilities": {
+                                        "Add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "Drop": [
+                                            "ALL"
+                                        ]
+                                    },
+                                    "Privileged": null,
+                                    "SELinuxOptions": null,
+                                    "RunAsUser": 33,
+                                    "RunAsGroup": null,
+                                    "RunAsNonRoot": null,
+                                    "ReadOnlyRootFilesystem": null,
+                                    "AllowPrivilegeEscalation": null
+                                },
+                                "Stdin": false,
+                                "StdinOnce": false,
+                                "TTY": false
+                            }
+                        ],
+                        "RestartPolicy": "Always",
+                        "TerminationGracePeriodSeconds": 60,
+                        "ActiveDeadlineSeconds": null,
+                        "DNSPolicy": "ClusterFirst",
+                        "NodeSelector": null,
+                        "ServiceAccountName": "nginx-ingress",
+                        "AutomountServiceAccountToken": null,
+                        "NodeName": "",
+                        "SecurityContext": {
+                            "HostNetwork": false,
+                            "HostPID": false,
+                            "HostIPC": false,
+                            "ShareProcessNamespace": null,
+                            "SELinuxOptions": null,
+                            "RunAsUser": null,
+                            "RunAsGroup": null,
+                            "RunAsNonRoot": null,
+                            "SupplementalGroups": null,
+                            "FSGroup": null
+                        },
+                        "ImagePullSecrets": null,
+                        "Hostname": "",
+                        "Subdomain": "",
+                        "Affinity": null,
+                        "SchedulerName": "default-scheduler",
+                        "Tolerations": null,
+                        "HostAliases": null,
+                        "PriorityClassName": "",
+                        "Priority": null,
+                        "DNSConfig": null
+                    }
+                }
+            },
+            "Status": {
+                "Replicas": 1,
+                "FullyLabeledReplicas": 1,
+                "ReadyReplicas": 1,
+                "AvailableReplicas": 1,
+                "ObservedGeneration": 1,
+                "Conditions": null
+            }
+        }
+    ]
+}

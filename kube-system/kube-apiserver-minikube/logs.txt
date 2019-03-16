@@ -1,0 +1,239 @@
+==== START logs for container kube-apiserver of pod kube-system/kube-apiserver-minikube ====
+Flag --insecure-port has been deprecated, This flag will be removed in a future version.
+I0308 08:48:03.667338       1 server.go:557] external host was not specified, using 10.41.10.26
+I0308 08:48:03.667429       1 server.go:146] Version: v1.13.3
+I0308 08:48:04.645821       1 initialization.go:91] enabled Initializers feature as part of admission plugin setup
+I0308 08:48:04.650690       1 plugins.go:158] Loaded 10 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,MutatingAdmissionWebhook,Initializers.
+I0308 08:48:04.650737       1 plugins.go:161] Loaded 6 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,ValidatingAdmissionWebhook,ResourceQuota.
+I0308 08:48:04.652385       1 plugins.go:158] Loaded 10 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,MutatingAdmissionWebhook,Initializers.
+I0308 08:48:04.652448       1 plugins.go:161] Loaded 6 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,ValidatingAdmissionWebhook,ResourceQuota.
+I0308 08:48:05.697012       1 master.go:228] Using reconciler: lease
+W0308 08:48:06.918493       1 genericapiserver.go:334] Skipping API batch/v2alpha1 because it has no resources.
+W0308 08:48:07.059137       1 genericapiserver.go:334] Skipping API rbac.authorization.k8s.io/v1alpha1 because it has no resources.
+W0308 08:48:07.067831       1 genericapiserver.go:334] Skipping API scheduling.k8s.io/v1alpha1 because it has no resources.
+W0308 08:48:07.080017       1 genericapiserver.go:334] Skipping API storage.k8s.io/v1alpha1 because it has no resources.
+W0308 08:48:07.197481       1 genericapiserver.go:334] Skipping API admissionregistration.k8s.io/v1alpha1 because it has no resources.
+[restful] 2019/03/08 08:48:07 log.go:33: [restful/swagger] listing is available at https://10.41.10.26:8443/swaggerapi
+[restful] 2019/03/08 08:48:07 log.go:33: [restful/swagger] https://10.41.10.26:8443/swaggerui/ is mapped to folder /swagger-ui/
+[restful] 2019/03/08 08:48:09 log.go:33: [restful/swagger] listing is available at https://10.41.10.26:8443/swaggerapi
+[restful] 2019/03/08 08:48:09 log.go:33: [restful/swagger] https://10.41.10.26:8443/swaggerui/ is mapped to folder /swagger-ui/
+I0308 08:48:09.073990       1 plugins.go:158] Loaded 10 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,LimitRanger,ServiceAccount,NodeRestriction,TaintNodesByCondition,Priority,DefaultTolerationSeconds,DefaultStorageClass,MutatingAdmissionWebhook,Initializers.
+I0308 08:48:09.074028       1 plugins.go:161] Loaded 6 validating admission controller(s) successfully in the following order: LimitRanger,ServiceAccount,Priority,PersistentVolumeClaimResize,ValidatingAdmissionWebhook,ResourceQuota.
+I0308 08:48:13.059249       1 secure_serving.go:116] Serving securely on [::]:8443
+I0308 08:48:13.059404       1 crd_finalizer.go:242] Starting CRDFinalizer
+I0308 08:48:13.068928       1 controller.go:84] Starting OpenAPI AggregationController
+I0308 08:48:13.069139       1 autoregister_controller.go:136] Starting autoregister controller
+I0308 08:48:13.069262       1 cache.go:32] Waiting for caches to sync for autoregister controller
+I0308 08:48:13.074163       1 customresource_discovery_controller.go:203] Starting DiscoveryController
+I0308 08:48:13.074215       1 naming_controller.go:284] Starting NamingConditionController
+I0308 08:48:13.074245       1 establishing_controller.go:73] Starting EstablishingController
+I0308 08:48:13.076171       1 apiservice_controller.go:90] Starting APIServiceRegistrationController
+I0308 08:48:13.076365       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+I0308 08:48:13.076494       1 available_controller.go:283] Starting AvailableConditionController
+I0308 08:48:13.076589       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+I0308 08:48:13.106121       1 crdregistration_controller.go:112] Starting crd-autoregister controller
+I0308 08:48:13.106144       1 controller_utils.go:1027] Waiting for caches to sync for crd-autoregister controller
+I0308 08:48:13.208240       1 controller_utils.go:1034] Caches are synced for crd-autoregister controller
+I0308 08:48:13.269570       1 cache.go:39] Caches are synced for autoregister controller
+I0308 08:48:13.280246       1 cache.go:39] Caches are synced for AvailableConditionController controller
+I0308 08:48:13.280312       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+I0308 08:48:17.270087       1 trace.go:76] Trace[523078579]: "Create /api/v1/namespaces" (started: 2019-03-08 08:48:13.2672578 +0000 UTC m=+9.887017601) (total time: 4.0028038s):
+Trace[523078579]: [4.0008225s] [4.0007933s] About to store object in database
+I0308 08:48:17.275731       1 trace.go:76] Trace[1445884865]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:13.2705698 +0000 UTC m=+9.890329501) (total time: 4.0051419s):
+Trace[1445884865]: [4.0007955s] [4.0005049s] About to store object in database
+I0308 08:48:17.276946       1 trace.go:76] Trace[2113922063]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:13.2707257 +0000 UTC m=+9.890485501) (total time: 4.0062049s):
+Trace[2113922063]: [4.0009552s] [4.0005441s] About to store object in database
+I0308 08:48:17.277111       1 trace.go:76] Trace[1043262121]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:13.2701944 +0000 UTC m=+9.889954101) (total time: 4.0069056s):
+Trace[1043262121]: [4.0007323s] [4.0006508s] About to store object in database
+I0308 08:48:17.276948       1 trace.go:76] Trace[1892801325]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:13.2709932 +0000 UTC m=+9.890752901) (total time: 4.0059426s):
+Trace[1892801325]: [4.000667s] [4.0006211s] About to store object in database
+I0308 08:48:17.277291       1 trace.go:76] Trace[1621979006]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:13.2706545 +0000 UTC m=+9.890414201) (total time: 4.0066242s):
+Trace[1621979006]: [4.0007072s] [4.0005548s] About to store object in database
+I0308 08:48:17.285294       1 trace.go:76] Trace[805388940]: "Create /api/v1/nodes" (started: 2019-03-08 08:48:13.1819529 +0000 UTC m=+9.801712601) (total time: 4.1033209s):
+Trace[805388940]: [4.1009967s] [4.1008988s] About to store object in database
+I0308 08:48:17.353618       1 trace.go:76] Trace[1688654607]: "Create /api/v1/namespaces" (started: 2019-03-08 08:48:13.3499821 +0000 UTC m=+9.969741801) (total time: 4.0036146s):
+Trace[1688654607]: [4.0015158s] [4.000729s] About to store object in database
+I0308 08:48:18.077536       1 trace.go:76] Trace[1982854989]: "Create /api/v1/namespaces" (started: 2019-03-08 08:48:14.0705252 +0000 UTC m=+10.690284901) (total time: 4.0069877s):
+Trace[1982854989]: [4.0006733s] [4.0006513s] About to store object in database
+I0308 08:48:18.077804       1 trace.go:76] Trace[952305207]: "Create /apis/scheduling.k8s.io/v1beta1/priorityclasses" (started: 2019-03-08 08:48:14.0706634 +0000 UTC m=+10.690423101) (total time: 4.0071286s):
+Trace[952305207]: [4.0005351s] [4.0005101s] About to store object in database
+I0308 08:48:18.078070       1 storage_scheduling.go:91] created PriorityClass system-node-critical with value 2000001000
+I0308 08:48:18.083031       1 trace.go:76] Trace[1029448813]: "Create /apis/rbac.authorization.k8s.io/v1/clusterroles" (started: 2019-03-08 08:48:14.0808164 +0000 UTC m=+10.700576101) (total time: 4.0021969s):
+Trace[1029448813]: [4.0007498s] [4.0007196s] About to store object in database
+I0308 08:48:18.083281       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/cluster-admin
+I0308 08:48:21.282265       1 trace.go:76] Trace[237875890]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:17.2764958 +0000 UTC m=+13.896255601) (total time: 4.0057423s):
+Trace[237875890]: [4.0014922s] [4.0014257s] About to store object in database
+I0308 08:48:21.290466       1 trace.go:76] Trace[1042592266]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:17.2806004 +0000 UTC m=+13.900360101) (total time: 4.0098388s):
+Trace[1042592266]: [4.0011086s] [4.0010715s] About to store object in database
+I0308 08:48:21.290724       1 trace.go:76] Trace[809579701]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:17.2808382 +0000 UTC m=+13.900597901) (total time: 4.0098721s):
+Trace[809579701]: [4.0005348s] [4.0005088s] About to store object in database
+I0308 08:48:21.291008       1 trace.go:76] Trace[1456038722]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:17.2807369 +0000 UTC m=+13.900496601) (total time: 4.0102589s):
+Trace[1456038722]: [4.0008337s] [4.0008082s] About to store object in database
+I0308 08:48:21.292358       1 trace.go:76] Trace[1117243879]: "Create /apis/apiregistration.k8s.io/v1/apiservices" (started: 2019-03-08 08:48:17.2809571 +0000 UTC m=+13.900716801) (total time: 4.0113871s):
+Trace[1117243879]: [4.0008881s] [4.0008603s] About to store object in database
+I0308 08:48:21.318075       1 trace.go:76] Trace[204965385]: "Create /api/v1/namespaces/default/services" (started: 2019-03-08 08:48:17.2746617 +0000 UTC m=+13.894421401) (total time: 4.0433786s):
+Trace[204965385]: [4.0032489s] [4.0032152s] About to store object in database
+I0308 08:48:21.318642       1 trace.go:76] Trace[1332665131]: "Create /api/v1/namespaces/default/events" (started: 2019-03-08 08:48:17.3001722 +0000 UTC m=+13.919931901) (total time: 4.0184569s):
+Trace[1332665131]: [4.0010569s] [4.0009777s] About to store object in database
+W0308 08:48:21.351490       1 lease.go:222] Resetting endpoints for master service "kubernetes" to [10.41.10.26]
+I0308 08:48:21.352131       1 controller.go:608] quota admission added evaluator for: endpoints
+I0308 08:48:22.083112       1 trace.go:76] Trace[1338453028]: "Create /apis/scheduling.k8s.io/v1beta1/priorityclasses" (started: 2019-03-08 08:48:18.0802654 +0000 UTC m=+14.700025201) (total time: 4.0028215s):
+Trace[1338453028]: [4.0006326s] [4.0006161s] About to store object in database
+I0308 08:48:22.083413       1 storage_scheduling.go:91] created PriorityClass system-cluster-critical with value 2000000000
+I0308 08:48:22.083460       1 storage_scheduling.go:100] all system priority classes are created successfully or already exist.
+I0308 08:48:22.086479       1 trace.go:76] Trace[714637278]: "Create /api/v1/namespaces/kube-system/configmaps" (started: 2019-03-08 08:48:18.0801298 +0000 UTC m=+14.699889601) (total time: 4.0063163s):
+Trace[714637278]: [4.0007514s] [4.0007175s] About to store object in database
+I0308 08:48:22.088602       1 trace.go:76] Trace[1966794682]: "Create /apis/rbac.authorization.k8s.io/v1/clusterroles" (started: 2019-03-08 08:48:18.0845964 +0000 UTC m=+14.704356101) (total time: 4.0039903s):
+Trace[1966794682]: [4.0006959s] [4.0006733s] About to store object in database
+I0308 08:48:22.088875       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:discovery
+I0308 08:48:22.092389       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:basic-user
+I0308 08:48:22.096473       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/admin
+I0308 08:48:22.100938       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/edit
+I0308 08:48:22.106562       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/view
+I0308 08:48:22.111788       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:aggregate-to-admin
+I0308 08:48:22.117717       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:aggregate-to-edit
+I0308 08:48:22.121921       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:aggregate-to-view
+I0308 08:48:22.127165       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:heapster
+I0308 08:48:22.132919       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:node
+I0308 08:48:22.138817       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:node-problem-detector
+I0308 08:48:22.144044       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:node-proxier
+I0308 08:48:22.148258       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:kubelet-api-admin
+I0308 08:48:22.152939       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:node-bootstrapper
+I0308 08:48:22.160866       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:auth-delegator
+I0308 08:48:22.169851       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:kube-aggregator
+I0308 08:48:22.175395       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:kube-controller-manager
+I0308 08:48:22.180306       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:kube-scheduler
+I0308 08:48:22.197783       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:kube-dns
+I0308 08:48:22.227023       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:persistent-volume-provisioner
+I0308 08:48:22.231868       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:csi-external-attacher
+I0308 08:48:22.235450       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:aws-cloud-provider
+I0308 08:48:22.238739       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:certificates.k8s.io:certificatesigningrequests:nodeclient
+I0308 08:48:22.242085       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:certificates.k8s.io:certificatesigningrequests:selfnodeclient
+I0308 08:48:22.245714       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:volume-scheduler
+I0308 08:48:22.249468       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:csi-external-provisioner
+I0308 08:48:22.253088       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:attachdetach-controller
+I0308 08:48:22.257683       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:clusterrole-aggregation-controller
+I0308 08:48:22.262886       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:cronjob-controller
+I0308 08:48:22.266177       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:daemon-set-controller
+I0308 08:48:22.269711       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:deployment-controller
+I0308 08:48:22.273341       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:disruption-controller
+I0308 08:48:22.278027       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:endpoint-controller
+I0308 08:48:22.282060       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:expand-controller
+I0308 08:48:22.285270       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:generic-garbage-collector
+I0308 08:48:22.288596       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:horizontal-pod-autoscaler
+I0308 08:48:22.291625       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:job-controller
+I0308 08:48:22.295358       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:namespace-controller
+I0308 08:48:22.298623       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:node-controller
+I0308 08:48:22.302633       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:persistent-volume-binder
+I0308 08:48:22.305862       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:pod-garbage-collector
+I0308 08:48:22.308714       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:replicaset-controller
+I0308 08:48:22.312568       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:replication-controller
+I0308 08:48:22.315440       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:resourcequota-controller
+I0308 08:48:22.318893       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:route-controller
+I0308 08:48:22.322170       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:service-account-controller
+I0308 08:48:22.326276       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:service-controller
+I0308 08:48:22.329601       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:statefulset-controller
+I0308 08:48:22.333432       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:ttl-controller
+I0308 08:48:22.336976       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:certificate-controller
+I0308 08:48:22.341124       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:pvc-protection-controller
+I0308 08:48:22.344060       1 storage_rbac.go:187] created clusterrole.rbac.authorization.k8s.io/system:controller:pv-protection-controller
+I0308 08:48:22.347203       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/cluster-admin
+I0308 08:48:22.349936       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:discovery
+I0308 08:48:22.353013       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:basic-user
+I0308 08:48:22.356526       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:node-proxier
+I0308 08:48:22.359652       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:kube-controller-manager
+I0308 08:48:22.371630       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:kube-dns
+I0308 08:48:22.411650       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:kube-scheduler
+I0308 08:48:22.451796       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:aws-cloud-provider
+I0308 08:48:22.492829       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:node
+I0308 08:48:22.538108       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:volume-scheduler
+I0308 08:48:22.572418       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:attachdetach-controller
+I0308 08:48:22.611572       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:clusterrole-aggregation-controller
+I0308 08:48:22.651508       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:cronjob-controller
+I0308 08:48:22.691780       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:daemon-set-controller
+I0308 08:48:22.731697       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:deployment-controller
+I0308 08:48:22.771403       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:disruption-controller
+I0308 08:48:22.811688       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:endpoint-controller
+I0308 08:48:22.851536       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:expand-controller
+I0308 08:48:22.892411       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:generic-garbage-collector
+I0308 08:48:22.932276       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:horizontal-pod-autoscaler
+I0308 08:48:22.971745       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:job-controller
+I0308 08:48:23.011392       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:namespace-controller
+I0308 08:48:23.051563       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:node-controller
+I0308 08:48:23.092207       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:persistent-volume-binder
+I0308 08:48:23.132910       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:pod-garbage-collector
+I0308 08:48:23.173115       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:replicaset-controller
+I0308 08:48:23.212674       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:replication-controller
+I0308 08:48:23.251059       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:resourcequota-controller
+I0308 08:48:23.291864       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:route-controller
+I0308 08:48:23.331648       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:service-account-controller
+I0308 08:48:23.372056       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:service-controller
+I0308 08:48:23.411233       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:statefulset-controller
+I0308 08:48:23.467859       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:ttl-controller
+I0308 08:48:23.491485       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:certificate-controller
+I0308 08:48:23.533251       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:pvc-protection-controller
+I0308 08:48:23.571260       1 storage_rbac.go:215] created clusterrolebinding.rbac.authorization.k8s.io/system:controller:pv-protection-controller
+I0308 08:48:23.609810       1 controller.go:608] quota admission added evaluator for: roles.rbac.authorization.k8s.io
+I0308 08:48:23.612068       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/extension-apiserver-authentication-reader in kube-system
+I0308 08:48:23.651620       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system:controller:bootstrap-signer in kube-system
+I0308 08:48:23.692104       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system:controller:cloud-provider in kube-system
+I0308 08:48:23.732811       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system:controller:token-cleaner in kube-system
+I0308 08:48:23.774465       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system::leader-locking-kube-controller-manager in kube-system
+I0308 08:48:23.831770       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system::leader-locking-kube-scheduler in kube-system
+I0308 08:48:23.853086       1 storage_rbac.go:246] created role.rbac.authorization.k8s.io/system:controller:bootstrap-signer in kube-public
+I0308 08:48:24.014777       1 controller.go:608] quota admission added evaluator for: rolebindings.rbac.authorization.k8s.io
+I0308 08:48:24.016812       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system::leader-locking-kube-controller-manager in kube-system
+I0308 08:48:24.021243       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system::leader-locking-kube-scheduler in kube-system
+I0308 08:48:24.026591       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system:controller:bootstrap-signer in kube-system
+I0308 08:48:24.031263       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system:controller:cloud-provider in kube-system
+I0308 08:48:24.051741       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system:controller:token-cleaner in kube-system
+I0308 08:48:24.091708       1 storage_rbac.go:276] created rolebinding.rbac.authorization.k8s.io/system:controller:bootstrap-signer in kube-public
+I0308 08:48:24.586377       1 controller.go:608] quota admission added evaluator for: serviceaccounts
+I0308 08:48:25.472979       1 controller.go:608] quota admission added evaluator for: deployments.apps
+I0308 08:48:25.507771       1 controller.go:608] quota admission added evaluator for: daemonsets.apps
+I0308 08:48:30.913853       1 controller.go:608] quota admission added evaluator for: replicasets.apps
+I0308 08:48:31.007567       1 controller.go:608] quota admission added evaluator for: controllerrevisions.apps
+I0308 08:48:33.467720       1 controller.go:608] quota admission added evaluator for: deployments.extensions
+I0308 08:48:38.699281       1 controller.go:608] quota admission added evaluator for: ingresses.extensions
+I0308 08:48:42.757672       1 trace.go:76] Trace[388052363]: "Get /api/v1/namespaces/default/pods/server-deployment-56d5dd7646-8kc2m" (started: 2019-03-08 08:48:42.2484037 +0000 UTC m=+38.868163501) (total time: 509.2407ms):
+Trace[388052363]: [509.1824ms] [509.177ms] About to write a response
+I0308 08:48:43.779057       1 trace.go:76] Trace[2001864198]: "GuaranteedUpdate etcd3: *apiregistration.APIService" (started: 2019-03-08 08:48:43.2774792 +0000 UTC m=+39.897239001) (total time: 501.5312ms):
+Trace[2001864198]: [501.5312ms] [501.5074ms] END
+I0308 08:48:43.779194       1 trace.go:76] Trace[853973667]: "Update /apis/apiregistration.k8s.io/v1/apiservices/v1beta1.authentication.k8s.io/status" (started: 2019-03-08 08:48:43.2765253 +0000 UTC m=+39.896285001) (total time: 502.6479ms):
+Trace[853973667]: [502.5962ms] [501.662ms] Object stored in database
+I0308 08:48:43.782017       1 trace.go:76] Trace[1643652888]: "GuaranteedUpdate etcd3: *apiregistration.APIService" (started: 2019-03-08 08:48:43.2759333 +0000 UTC m=+39.895693001) (total time: 506.0573ms):
+Trace[1643652888]: [506.0573ms] [506.013ms] END
+I0308 08:48:43.782112       1 trace.go:76] Trace[1688701414]: "Update /apis/apiregistration.k8s.io/v1/apiservices/v1.storage.k8s.io/status" (started: 2019-03-08 08:48:43.2758151 +0000 UTC m=+39.895574901) (total time: 506.2831ms):
+Trace[1688701414]: [506.2408ms] [506.1561ms] Object stored in database
+I0308 08:48:43.782292       1 trace.go:76] Trace[714265298]: "GuaranteedUpdate etcd3: *apiregistration.APIService" (started: 2019-03-08 08:48:43.2769182 +0000 UTC m=+39.896678001) (total time: 505.3626ms):
+Trace[714265298]: [505.3626ms] [505.3419ms] END
+I0308 08:48:43.782356       1 trace.go:76] Trace[1110086300]: "Update /apis/apiregistration.k8s.io/v1/apiservices/v1beta1.scheduling.k8s.io/status" (started: 2019-03-08 08:48:43.2768413 +0000 UTC m=+39.896601101) (total time: 505.502ms):
+Trace[1110086300]: [505.4615ms] [505.405ms] Object stored in database
+I0308 08:48:43.785664       1 trace.go:76] Trace[1153854462]: "GuaranteedUpdate etcd3: *apiregistration.APIService" (started: 2019-03-08 08:48:43.2766643 +0000 UTC m=+39.896424101) (total time: 508.9824ms):
+Trace[1153854462]: [508.9824ms] [508.9552ms] END
+I0308 08:48:43.785744       1 trace.go:76] Trace[1640021413]: "Update /apis/apiregistration.k8s.io/v1/apiservices/v1.autoscaling/status" (started: 2019-03-08 08:48:43.2765646 +0000 UTC m=+39.896324301) (total time: 509.1668ms):
+Trace[1640021413]: [509.1166ms] [509.0649ms] Object stored in database
+I0308 08:48:43.785909       1 trace.go:76] Trace[1729502294]: "GuaranteedUpdate etcd3: *apiregistration.APIService" (started: 2019-03-08 08:48:43.2771941 +0000 UTC m=+39.896953901) (total time: 508.6982ms):
+Trace[1729502294]: [508.6982ms] [508.6789ms] END
+I0308 08:48:43.785961       1 trace.go:76] Trace[1183880430]: "Update /apis/apiregistration.k8s.io/v1/apiservices/v1./status" (started: 2019-03-08 08:48:43.2764802 +0000 UTC m=+39.896239901) (total time: 509.4697ms):
+Trace[1183880430]: [509.4426ms] [508.7476ms] Object stored in database
+I0308 08:48:47.981890       1 trace.go:76] Trace[1184245085]: "GuaranteedUpdate etcd3: *core.Pod" (started: 2019-03-08 08:48:47.4646382 +0000 UTC m=+44.084397901) (total time: 517.1442ms):
+Trace[1184245085]: [517.0618ms] [516.5503ms] Transaction committed
+I0308 08:48:47.982073       1 trace.go:76] Trace[1774343175]: "Patch /api/v1/namespaces/default/pods/client-deployment-85b74f5bb8-m7htw/status" (started: 2019-03-08 08:48:47.4645622 +0000 UTC m=+44.084321901) (total time: 517.4943ms):
+Trace[1774343175]: [517.3789ms] [516.9293ms] Object stored in database
+I0308 08:49:00.430306       1 trace.go:76] Trace[558417820]: "GuaranteedUpdate etcd3: *apps.ReplicaSet" (started: 2019-03-08 08:48:59.900293 +0000 UTC m=+56.520052701) (total time: 529.9831ms):
+Trace[558417820]: [529.932ms] [529.6072ms] Transaction committed
+I0308 08:49:00.430447       1 trace.go:76] Trace[493981354]: "Update /apis/apps/v1/namespaces/default/replicasets/server-deployment-56d5dd7646/status" (started: 2019-03-08 08:48:59.9001261 +0000 UTC m=+56.519885901) (total time: 530.307ms):
+Trace[493981354]: [530.2202ms] [530.1144ms] Object stored in database
+I0308 08:49:00.430675       1 trace.go:76] Trace[982639025]: "Get /api/v1/namespaces/default/pods/client-deployment-85b74f5bb8-jt7bk" (started: 2019-03-08 08:48:59.9241923 +0000 UTC m=+56.543952001) (total time: 506.4591ms):
+Trace[982639025]: [506.4061ms] [506.4031ms] About to write a response
+I0308 08:49:00.430895       1 trace.go:76] Trace[1557517581]: "Get /api/v1/namespaces/default/pods/client-deployment-85b74f5bb8-jt7bk" (started: 2019-03-08 08:48:59.9052848 +0000 UTC m=+56.525044501) (total time: 525.5862ms):
+Trace[1557517581]: [525.5296ms] [525.5266ms] About to write a response
+I0308 08:49:00.431059       1 trace.go:76] Trace[1876792663]: "Get /api/v1/namespaces/kube-system/serviceaccounts/cronjob-controller" (started: 2019-03-08 08:48:59.9079933 +0000 UTC m=+56.527753101) (total time: 523.0544ms):
+Trace[1876792663]: [523.0315ms] [523.0295ms] About to write a response
+I0308 08:49:00.442994       1 trace.go:76] Trace[1588969019]: "GuaranteedUpdate etcd3: *core.Event" (started: 2019-03-08 08:48:59.9011021 +0000 UTC m=+56.520861801) (total time: 541.8589ms):
+Trace[1588969019]: [530.0772ms] [530.0772ms] initial value restored
+I0308 08:49:00.443108       1 trace.go:76] Trace[921706635]: "Patch /api/v1/namespaces/default/events/server-deployment-56d5dd7646.1589ef8b82dc29a8" (started: 2019-03-08 08:48:59.9010349 +0000 UTC m=+56.520794601) (total time: 542.0542ms):
+Trace[921706635]: [530.1457ms] [530.115ms] About to apply patch
+I0308 08:59:24.080815       1 controller.go:608] quota admission added evaluator for: replicasets.extensions
+==== END logs for container kube-apiserver of pod kube-system/kube-apiserver-minikube ====

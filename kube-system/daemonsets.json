@@ -1,0 +1,283 @@
+{
+    "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/daemonsets",
+    "resourceVersion": "4225",
+    "Items": [
+        {
+            "name": "kube-proxy",
+            "namespace": "kube-system",
+            "selfLink": "/apis/extensions/v1beta1/namespaces/kube-system/daemonsets/kube-proxy",
+            "uid": "efb90862-417e-11e9-9e86-00155d700139",
+            "resourceVersion": "391",
+            "generation": 1,
+            "creationTimestamp": "2019-03-08T08:48:25Z",
+            "labels": {
+                "k8s-app": "kube-proxy"
+            },
+            "Spec": {
+                "Selector": {
+                    "matchLabels": {
+                        "k8s-app": "kube-proxy"
+                    }
+                },
+                "Template": {
+                    "creationTimestamp": null,
+                    "labels": {
+                        "k8s-app": "kube-proxy"
+                    },
+                    "annotations": {
+                        "scheduler.alpha.kubernetes.io/critical-pod": ""
+                    },
+                    "Spec": {
+                        "Volumes": [
+                            {
+                                "Name": "kube-proxy",
+                                "HostPath": null,
+                                "EmptyDir": null,
+                                "GCEPersistentDisk": null,
+                                "AWSElasticBlockStore": null,
+                                "GitRepo": null,
+                                "Secret": null,
+                                "NFS": null,
+                                "ISCSI": null,
+                                "Glusterfs": null,
+                                "PersistentVolumeClaim": null,
+                                "RBD": null,
+                                "Quobyte": null,
+                                "FlexVolume": null,
+                                "Cinder": null,
+                                "CephFS": null,
+                                "Flocker": null,
+                                "DownwardAPI": null,
+                                "FC": null,
+                                "AzureFile": null,
+                                "ConfigMap": {
+                                    "Name": "kube-proxy",
+                                    "Items": null,
+                                    "DefaultMode": 420,
+                                    "Optional": null
+                                },
+                                "VsphereVolume": null,
+                                "AzureDisk": null,
+                                "PhotonPersistentDisk": null,
+                                "Projected": null,
+                                "PortworxVolume": null,
+                                "ScaleIO": null,
+                                "StorageOS": null
+                            },
+                            {
+                                "Name": "xtables-lock",
+                                "HostPath": {
+                                    "Path": "/run/xtables.lock",
+                                    "Type": "FileOrCreate"
+                                },
+                                "EmptyDir": null,
+                                "GCEPersistentDisk": null,
+                                "AWSElasticBlockStore": null,
+                                "GitRepo": null,
+                                "Secret": null,
+                                "NFS": null,
+                                "ISCSI": null,
+                                "Glusterfs": null,
+                                "PersistentVolumeClaim": null,
+                                "RBD": null,
+                                "Quobyte": null,
+                                "FlexVolume": null,
+                                "Cinder": null,
+                                "CephFS": null,
+                                "Flocker": null,
+                                "DownwardAPI": null,
+                                "FC": null,
+                                "AzureFile": null,
+                                "ConfigMap": null,
+                                "VsphereVolume": null,
+                                "AzureDisk": null,
+                                "PhotonPersistentDisk": null,
+                                "Projected": null,
+                                "PortworxVolume": null,
+                                "ScaleIO": null,
+                                "StorageOS": null
+                            },
+                            {
+                                "Name": "lib-modules",
+                                "HostPath": {
+                                    "Path": "/lib/modules",
+                                    "Type": ""
+                                },
+                                "EmptyDir": null,
+                                "GCEPersistentDisk": null,
+                                "AWSElasticBlockStore": null,
+                                "GitRepo": null,
+                                "Secret": null,
+                                "NFS": null,
+                                "ISCSI": null,
+                                "Glusterfs": null,
+                                "PersistentVolumeClaim": null,
+                                "RBD": null,
+                                "Quobyte": null,
+                                "FlexVolume": null,
+                                "Cinder": null,
+                                "CephFS": null,
+                                "Flocker": null,
+                                "DownwardAPI": null,
+                                "FC": null,
+                                "AzureFile": null,
+                                "ConfigMap": null,
+                                "VsphereVolume": null,
+                                "AzureDisk": null,
+                                "PhotonPersistentDisk": null,
+                                "Projected": null,
+                                "PortworxVolume": null,
+                                "ScaleIO": null,
+                                "StorageOS": null
+                            }
+                        ],
+                        "InitContainers": null,
+                        "Containers": [
+                            {
+                                "Name": "kube-proxy",
+                                "Image": "k8s.gcr.io/kube-proxy:v1.13.3",
+                                "Command": [
+                                    "/usr/local/bin/kube-proxy",
+                                    "--config=/var/lib/kube-proxy/config.conf",
+                                    "--hostname-override=$(NODE_NAME)"
+                                ],
+                                "Args": null,
+                                "WorkingDir": "",
+                                "Ports": null,
+                                "EnvFrom": null,
+                                "Env": [
+                                    {
+                                        "Name": "NODE_NAME",
+                                        "Value": "",
+                                        "ValueFrom": {
+                                            "FieldRef": {
+                                                "APIVersion": "v1",
+                                                "FieldPath": "spec.nodeName"
+                                            },
+                                            "ResourceFieldRef": null,
+                                            "ConfigMapKeyRef": null,
+                                            "SecretKeyRef": null
+                                        }
+                                    }
+                                ],
+                                "Resources": {
+                                    "Limits": null,
+                                    "Requests": null
+                                },
+                                "VolumeMounts": [
+                                    {
+                                        "Name": "kube-proxy",
+                                        "ReadOnly": false,
+                                        "MountPath": "/var/lib/kube-proxy",
+                                        "SubPath": "",
+                                        "MountPropagation": null
+                                    },
+                                    {
+                                        "Name": "xtables-lock",
+                                        "ReadOnly": false,
+                                        "MountPath": "/run/xtables.lock",
+                                        "SubPath": "",
+                                        "MountPropagation": null
+                                    },
+                                    {
+                                        "Name": "lib-modules",
+                                        "ReadOnly": true,
+                                        "MountPath": "/lib/modules",
+                                        "SubPath": "",
+                                        "MountPropagation": null
+                                    }
+                                ],
+                                "VolumeDevices": null,
+                                "LivenessProbe": null,
+                                "ReadinessProbe": null,
+                                "Lifecycle": null,
+                                "TerminationMessagePath": "/dev/termination-log",
+                                "TerminationMessagePolicy": "File",
+                                "ImagePullPolicy": "IfNotPresent",
+                                "SecurityContext": {
+                                    "Capabilities": null,
+                                    "Privileged": true,
+                                    "SELinuxOptions": null,
+                                    "RunAsUser": null,
+                                    "RunAsGroup": null,
+                                    "RunAsNonRoot": null,
+                                    "ReadOnlyRootFilesystem": null,
+                                    "AllowPrivilegeEscalation": null
+                                },
+                                "Stdin": false,
+                                "StdinOnce": false,
+                                "TTY": false
+                            }
+                        ],
+                        "RestartPolicy": "Always",
+                        "TerminationGracePeriodSeconds": 30,
+                        "ActiveDeadlineSeconds": null,
+                        "DNSPolicy": "ClusterFirst",
+                        "NodeSelector": null,
+                        "ServiceAccountName": "kube-proxy",
+                        "AutomountServiceAccountToken": null,
+                        "NodeName": "",
+                        "SecurityContext": {
+                            "HostNetwork": true,
+                            "HostPID": false,
+                            "HostIPC": false,
+                            "ShareProcessNamespace": null,
+                            "SELinuxOptions": null,
+                            "RunAsUser": null,
+                            "RunAsGroup": null,
+                            "RunAsNonRoot": null,
+                            "SupplementalGroups": null,
+                            "FSGroup": null
+                        },
+                        "ImagePullSecrets": null,
+                        "Hostname": "",
+                        "Subdomain": "",
+                        "Affinity": null,
+                        "SchedulerName": "default-scheduler",
+                        "Tolerations": [
+                            {
+                                "Key": "CriticalAddonsOnly",
+                                "Operator": "Exists",
+                                "Value": "",
+                                "Effect": "",
+                                "TolerationSeconds": null
+                            },
+                            {
+                                "Key": "",
+                                "Operator": "Exists",
+                                "Value": "",
+                                "Effect": "",
+                                "TolerationSeconds": null
+                            }
+                        ],
+                        "HostAliases": null,
+                        "PriorityClassName": "system-node-critical",
+                        "Priority": null,
+                        "DNSConfig": null
+                    }
+                },
+                "UpdateStrategy": {
+                    "Type": "RollingUpdate",
+                    "RollingUpdate": {
+                        "MaxUnavailable": 1
+                    }
+                },
+                "MinReadySeconds": 0,
+                "TemplateGeneration": 1,
+                "RevisionHistoryLimit": 10
+            },
+            "Status": {
+                "CurrentNumberScheduled": 1,
+                "NumberMisscheduled": 0,
+                "DesiredNumberScheduled": 1,
+                "NumberReady": 1,
+                "ObservedGeneration": 1,
+                "UpdatedNumberScheduled": 1,
+                "NumberAvailable": 1,
+                "NumberUnavailable": 0,
+                "CollisionCount": null,
+                "Conditions": null
+            }
+        }
+    ]
+}
